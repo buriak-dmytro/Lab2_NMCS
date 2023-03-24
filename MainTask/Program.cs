@@ -66,22 +66,22 @@ namespace MainTask
             ws = new double[n]; // one element will remain "0" and its ok
             vs = new double[n];
 
-            ws[0] = (-1.0) * (gammas[0]) / (alphas[0]); // - * /
-            vs[0] = (1.0) * (bs[0]) / (alphas[0]); // * /
+            ws[0] = - (gammas[0] / alphas[0]); // - /
+            vs[0] = bs[0] / alphas[0]; // /
 
-            operationsAmount += 5;
+            operationsAmount += 3;
 
             for (int i = 1; i < n - 1; i++)
             {
-                ws[i] = (-1.0) * (gammas[i]) / (betas[i] * ws[i - 1] + alphas[i]); // - * / * +
-                vs[i] = (1.0) * (bs[i] - betas[i] * vs[i - 1]) / (betas[i] * ws[i - 1] + alphas[i]); // * - * / * +
+                ws[i] = - (gammas[i] / (betas[i] * ws[i - 1] + alphas[i])); // - / * +
+                vs[i] = (bs[i] - betas[i] * vs[i - 1]) / (betas[i] * ws[i - 1] + alphas[i]); // - * / * +
 
-                operationsAmount += 11;
+                operationsAmount += 9;
             }
 
-            vs[n - 1] = (1.0) * (bs[n - 1] - betas[n - 1] * vs[n - 2]) / (betas[n - 1] * ws[n - 2] + alphas[n - 1]); // * - * / * +
+            vs[n - 1] = (bs[n - 1] - betas[n - 1] * vs[n - 2]) / (betas[n - 1] * ws[n - 2] + alphas[n - 1]); // - * / * +
 
-            operationsAmount += 6;
+            operationsAmount += 5;
         }
 
         // fill (x) matrix (calculation)
@@ -89,15 +89,13 @@ namespace MainTask
         {
             xs = new double[n];
 
-            xs[n - 1] = vs[n - 1]; // =
-
-            operationsAmount += 1;
+            xs[n - 1] = vs[n - 1];
 
             for (int i = n - 2; i > -1; i--)
             {
-                xs[i] = (1.0) * (ws[i] * xs[i + 1] + vs[i]); // * * +
+                xs[i] = ws[i] * xs[i + 1] + vs[i]; // * +
 
-                operationsAmount += 3;
+                operationsAmount += 2;
             }
         }
 

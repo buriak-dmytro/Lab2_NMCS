@@ -67,10 +67,10 @@ namespace AdditionalTask
             ls = new double[n];
             us = new double[n]; // one element will remain "0" and its ok
 
-            ls[0] = alphas[0]; // =
+            ls[0] = alphas[0];
             us[0] = gammas[0] / ls[0]; // /
 
-            operationsAmount += 2;
+            operationsAmount += 1;
 
             for (int i = 1; i < n - 1; i++)
             {
@@ -107,9 +107,7 @@ namespace AdditionalTask
         {
             xs = new double[n];
 
-            xs[n - 1] = ys[n - 1]; // =
-
-            operationsAmount += 1;
+            xs[n - 1] = ys[n - 1];
 
             for (int i = n - 2; i > -1; i--)
             {

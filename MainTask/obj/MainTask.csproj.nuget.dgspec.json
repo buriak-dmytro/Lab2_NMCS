@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\Lab2\\MainTask.csproj": {}
+    "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\MainTask\\MainTask.csproj": {}
   },
   "projects": {
-    "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\Lab2\\MainTask.csproj": {
+    "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\MainTask\\MainTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\Lab2\\MainTask.csproj",
+        "projectUniqueName": "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\MainTask\\MainTask.csproj",
         "projectName": "MainTask",
-        "projectPath": "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\Lab2\\MainTask.csproj",
+        "projectPath": "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\MainTask\\MainTask.csproj",
         "packagesPath": "C:\\Users\\dimb0\\.nuget\\packages\\",
-        "outputPath": "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\Lab2\\obj\\",
+        "outputPath": "E:\\Личные документы\\Университет\\Чисельні методи в інформатиці\\Лаб 2\\Lab2\\MainTask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dimb0\\AppData\\Roaming\\NuGet\\NuGet.Config",
